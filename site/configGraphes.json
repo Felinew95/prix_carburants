@@ -1,0 +1,37 @@
+{
+    "carburants": {
+        "libelles"  : ["Gazole", "SP95", "SP98", "E10"],
+        "couleurs"  : {
+            "pleines" : ["#f59e0b", "#3b82f6", "#ef4444", "#10b981"],
+            "transparentes" : [
+                "rgba(245, 158, 11, 0.3)",
+                "rgba(59,  130, 246, 0.3)",
+                "rgba(239,  68,  68, 0.3)",
+                "rgba(16,  185, 129, 0.3)"
+            ]
+        }
+    },
+
+    "axeX" : {
+        "titre" : "Carburant",
+        "gras"  : true
+    },
+
+    "axeY" : {
+        "titre"          : "Prix",
+        "gras"           : true,
+        "commencerAZero" : false
+    },
+
+    "graphiqueVille" : {
+        "type"        : "bar",
+        "rayonBarres" : 6,
+        "legende"     : { "position" : "bottom" }
+    },
+
+    "graphiqueNational" : {
+        "type"        : "bar",
+        "rayonBarres" : 8,
+        "legende"     : { "afficher" : false }
+    }
+}
