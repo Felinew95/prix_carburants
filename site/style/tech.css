@@ -1,0 +1,898 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #ffffff;
+    --secondary-color: #2c3e50;
+    --accent-color: #8e8e8e;
+    --bg-light: #f8f9fa;
+    --bg-white: #ffffff;
+    --text-dark: #2c3e50;
+    --text-muted: #6c757d;
+    --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.1);
+    --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.15);
+    --border-radius: 12px;
+    --secondary-blue: #3b82f6;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #aeb0af 0%, #4d5d6d 100%);
+    color: var(--text-dark);
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+p {
+    padding: 20px;
+    font-weight: 500;
+    border-radius: 8px;
+    box-shadow: var(--shadow-sm);
+}
+
+/** Header */
+header {
+    background: var(--bg-white);
+    position: sticky;
+    top: 0;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;  
+    padding: 15px 40px;
+    box-shadow: var(--shadow-md);
+    z-index: 100;
+}
+
+.step-infos {
+    border-radius: 0 0 12px 12px;
+    background-color: white;
+}
+
+#logo {
+    width: 150px;
+}
+ 
+/** Navigation */
+.nav_menu {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 3em;
+}
+ 
+.nav_menu li a {
+    text-decoration: none;
+    color: var(--text-dark);
+    font-weight: 500;
+    transition: color 0.3s ease;
+    position: relative;
+}
+ 
+.nav_menu li a:hover {
+    color: var(--secondary-blue);
+}
+ 
+.nav_menu li a::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--primary-color);
+    transition: width 0.3s ease;
+}
+ 
+.nav_menu li a:hover::after {
+    width: 100%;
+}
+
+/** Films Ghibli */
+.Film_Ghibli,
+.geolocatisation {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    padding: 40px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+ 
+.Film_Ghibli h2,
+.geolocatisation h2 {
+    background: linear-gradient(135deg, var(--primary-color) 0%, #848484 100%);
+    color: rgb(0, 0, 0);
+    text-align: center;
+    font-size: 2rem;
+    padding: 25px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-md);
+    letter-spacing: 0.5px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 600;
+}
+
+#InfosFilms h3,
+#geolocalisationInfos h3 {
+    margin-bottom: 10px;
+}
+
+#TopRow {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    align-items: stretch; 
+}
+
+#ColonneGauche {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    min-width: 350px;
+}
+
+#InfosFilms, #Banner {
+    flex: 1; 
+    display: flex;
+    flex-direction: column;
+}
+
+#InfosFilms {
+    flex: 1;
+    background: var(--bg-white);
+    padding: 25px;
+    border-radius: var(--border-radius);
+    overflow: auto;
+    border: 2px solid black;
+    box-shadow: var(--shadow-sm);
+    max-height: 600px;
+    scrollbar-width: none;
+}
+
+#InfosFilms dl {
+    display: grid;
+    grid-template-columns: 120px 1fr;
+    gap: 10px 10px;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+ 
+#InfosFilms dt {
+    font-weight: 700;
+    color: var(--text-dark);
+}
+ 
+#InfosFilms dd {
+    color: var(--secondary-color);
+    font-weight: 600;
+    margin: 0;
+}
+
+#infos-API-Ghibli, #infos-API-Geo {
+    border-radius: 12px;
+    border: 1px solid black;
+    background-color: rgb(203, 203, 203);
+    box-shadow: var(--shadow-sm);
+}
+
+#infos-API-Geo {
+    padding: 20px;
+}
+
+#geolocalisationInfos dl {
+    margin-top: 10px;
+}
+
+#Banner,
+#Couverture {
+    display: flex;
+    flex-direction: column;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+    background: var(--bg-light);
+    border: 10px solid black;
+}
+
+#Couverture {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+#Banner img,
+#Couverture img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+ 
+#Banner figcaption,
+#Couverture figcaption {
+    text-align: center;
+    font-size: 0.85rem;
+    color: white;
+    background: black;
+    padding: 15px;
+    font-style: italic;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#Description {
+    background: var(--bg-white);
+    padding: 30px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-sm);
+}
+ 
+#Description h3 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1.3rem;
+    color: var(--text-dark);
+}
+ 
+#Description p {
+    background: var(--bg-light);
+    padding: 20px;
+    border-radius: 8px;
+    line-height: 1.8;
+    color: var(--text-dark);
+}
+
+@media (max-width: 900px) {
+    header {
+        padding: 0 20px;
+    }
+ 
+    .nav_menu {
+        gap: 1.5em;
+    }
+ 
+    #TopRow {
+        flex-direction: column;
+        gap: 20px;
+    }
+ 
+    #Couverture {
+        max-width: 100%;
+    }
+ 
+    .Film_Ghibli {
+        padding: 20px;
+    }
+ 
+    #InfosFilms dl {
+        grid-template-columns: 100px 1fr;
+        gap: 8px 12px;
+    }
+
+    .geolocatisation {
+        padding: 30px;
+        gap: 20px;
+    }
+ 
+    .geolocatisation h2 {
+        font-size: 1.5rem;
+        padding: 20px 25px;
+    }
+ 
+    #geolocalisationInfos dl {
+        grid-template-columns: 120px 1fr;
+        gap: 10px 15px;
+    }
+}
+ 
+@media (max-width: 700px) {
+    header {
+        height: auto;
+        padding: 15px 20px;
+        flex-direction: column;
+        gap: 15px;
+    }
+ 
+    #logo {
+        width: 60px;
+        position: static;
+        margin-bottom: 10px;  
+    }
+ 
+    .nav_menu {
+        flex-direction: column;
+        gap: 1em;
+        text-align: center;
+    }
+ 
+    .Film_Ghibli h2 {
+        font-size: 1.5rem;
+    }
+ 
+    #Description {
+        padding: 20px;
+    }
+ 
+    #InfosFilms {
+        padding: 15px;
+        max-height: 400px;
+    }
+ 
+    #InfosFilms dl {
+        grid-template-columns: 1fr;
+        gap: 8px;
+        padding: 8px;
+        margin-bottom: 8px;
+    }
+ 
+    #Banner img,
+    #Couverture img {
+        height: auto;
+    }
+
+    .geolocatisation {
+        padding: 20px;
+        gap: 15px;
+    }
+ 
+    .geolocatisation h2 {
+        font-size: 1.3rem;
+        padding: 15px 20px;
+    }
+ 
+    #geolocalisationInfos {
+        padding: 15px;
+    }
+ 
+    #geolocalisationInfos dl {
+        grid-template-columns: 1fr;
+        gap: 12px 15px;
+    }
+ 
+    #geolocalisationInfos dt {
+        font-size: 0.8rem;
+    }
+ 
+    #geolocalisationInfos dd {
+        font-size: 0.9rem;
+    }
+
+    footer {
+        padding: 30px 15px;
+    }
+ 
+    .footer-content {
+        padding: 0 20px;
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+ 
+    .footer-links {
+        justify-content: center;
+        width: 100%;
+    }
+ 
+    footer span {
+        font-size: 0.85rem;
+    }
+ 
+    .footer-links a {
+        padding: 6px 12px;
+        font-size: 0.8rem;
+    }
+}
+ 
+@media (max-width: 480px) {
+    body {
+        font-size: 14px;
+    }
+ 
+    header {
+        padding: 12px 15px;
+        gap: 12px;
+    }
+
+    #logo {
+        width: 50px;
+    }
+
+    .nav_menu {
+        gap: 0.5em;
+        font-size: 0.85rem;
+    }
+ 
+    .Film_Ghibli {
+        padding: 15px;
+        gap: 15px;
+    }
+ 
+    .Film_Ghibli h2,
+    .geolocatisation h2 {
+        font-size: 1.3rem;
+        padding: 15px;
+    }
+
+    .geolocatisation {
+        padding: 15px;
+        gap: 12px;
+        margin: 0;
+    }
+ 
+    .geolocatisation h2 {
+        font-size: 1.1rem;
+        padding: 12px 15px;
+    }
+ 
+    #geolocalisationInfos {
+        padding: 12px;
+        border-left: 3px solid var(--primary-color);
+    }
+ 
+    #geolocalisationInfos h3 {
+        margin-bottom: 15px;
+        font-size: 0.85rem;
+    }
+
+    #geolocalisationInfos dl {
+        grid-template-columns: 1fr;
+        gap: 8px 10px;
+    }
+ 
+    #geolocalisationInfos dt {
+        font-size: 0.7rem;
+        margin-bottom: 3px;
+    }
+ 
+    #geolocalisationInfos dd {
+        font-size: 0.8rem;
+        margin-bottom: 10px;
+    }
+
+    #InfosFilms {
+        max-height: 300px;
+        padding: 12px;
+    }
+
+    #InfosFilms dl {
+        grid-template-columns: 1fr;
+        gap: 6px;
+        padding: 6px;
+        margin-bottom: 6px;
+    }
+
+    #InfosFilms dt {
+        font-size: 0.75rem;
+    }
+
+    #InfosFilms dd {
+        font-size: 0.8rem;
+    }
+
+    footer {
+        padding: 20px 10px;
+    }
+ 
+    .footer-content {
+        padding: 0 10px;
+        gap: 12px;
+        flex-direction: column;
+    }
+
+    .footer-text-group {
+        gap: 5px;
+    }
+ 
+    .footer-links {
+        flex-direction: column;
+        gap: 8px;
+        width: 100%;
+    }
+ 
+    .footer-links a {
+        width: 100%;
+        text-align: center;
+        padding: 8px 10px;
+        font-size: 0.7rem;
+    }
+ 
+    footer span {
+        font-size: 0.75rem;
+    }
+}
+
+@media (max-width: 380px) {
+    body {
+        font-size: 13px;
+    }
+
+    header {
+        padding: 10px 12px;
+        gap: 10px;
+    }
+
+    #logo {
+        width: 45px;
+    }
+
+    .nav_menu {
+        gap: 0.4em;
+        font-size: 0.8rem;
+    }
+
+    .Film_Ghibli h2,
+    .geolocatisation h2 {
+        font-size: 1.1rem;
+        padding: 12px;
+    }
+
+    .geolocatisation {
+        padding: 12px;
+        gap: 10px;
+    }
+
+    #geolocalisationInfos {
+        padding: 10px;
+    }
+
+    #geolocalisationInfos dl {
+        gap: 6px 8px;
+    }
+
+    #geolocalisationInfos dt {
+        font-size: 0.65rem;
+    }
+
+    #geolocalisationInfos dd {
+        font-size: 0.75rem;
+        margin-bottom: 8px;
+    }
+
+    .footer-links a {
+        padding: 6px 8px;
+        font-size: 0.65rem;
+    }
+}
+
+.geolocatisation{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    padding: 40px;
+    margin:auto;
+}
+
+#geolocalisationInfos {
+    background: var(--bg-white);
+    padding: 25px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-sm);
+    border-left: 4px solid var(--primary-color);
+}
+
+#geolocalisationInfos h3 {
+    margin-bottom: 25px;
+}
+ 
+#geolocalisationInfos dl {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px 40px;
+    margin: 0;
+}
+ 
+#geolocalisationInfos dt {
+    font-weight: 700;
+    font-size: 0.9rem;
+    color: var(--text-dark);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 5px;
+}
+ 
+#geolocalisationInfos dd {
+    color: black;
+    font-size: 0.95rem;
+    font-weight: 600;
+    margin: 0 0 15px 0;
+    word-break: break-all;
+    overflow-wrap: break-word;
+}
+
+/** Footer */
+footer {
+    background: linear-gradient(135deg, var(--secondary-color) 0%, #1a252f 100%);
+    color: white;
+    padding: 40px 20px;
+    margin-top: auto;
+    width: 100%;
+    border-top: 2px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.15);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+ 
+.footer-content {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    width: 100%;
+}
+ 
+footer span {
+    font-size: 0.9rem;
+    opacity: 0.85;
+    font-weight: 500;
+    letter-spacing: 0.3px;
+    transition: opacity 0.3s ease;
+    display: inline;
+}
+ 
+footer span:hover {
+    opacity: 1;
+}
+ 
+.footer-text-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    justify-content: center;
+    align-items: center;
+    margin-right: auto;
+}
+ 
+.footer-links {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    white-space: nowrap;
+    margin-left: auto;
+}
+ 
+.footer-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.85rem;
+    padding: 8px 14px;
+    border: 1.5px solid rgba(255, 255, 255, 0.4);
+    border-radius: 6px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+ 
+.footer-links a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: white;
+    transition: left 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: -1;
+}
+ 
+.footer-links a:hover {
+    border-color: white;
+    color: var(--secondary-color);
+}
+ 
+.footer-links a:hover::before {
+    left: 0;
+}
+
+.infos-API {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    padding: 40px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.infos-API h1 {
+    background: linear-gradient(135deg, var(--primary-color) 0%, #848484 100%);
+    color: black;
+    text-align: center;
+    font-size: 2rem;
+    padding: 25px;
+    border-radius: 12px 12px 0 0;
+    box-shadow: var(--shadow-md);
+    letter-spacing: 0.5px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 600;
+    margin: 0;
+    word-break: break-word;
+}
+
+#view-infos-techniques-content {
+    background: var(--bg-white);
+    padding: 25px;
+    border-radius: 0 0 12px 12px;
+    box-shadow: var(--shadow-sm);
+}
+
+.view-infos-techniques {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+.view-infos-techniques > div {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.view-infos-techniques h3 {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    letter-spacing: -0.2px;
+    margin: 0;
+    text-transform: uppercase;
+    word-wrap: break-word;
+}
+
+#view-api h3 {
+    color: #4a6ba5;
+}
+
+#view-tech h3 {
+    color: #8b4fa5;
+}
+
+.view-infos-techniques ul {
+    list-style: inside;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.view-infos-techniques li {
+    font-size: 0.95rem;
+    color: var(--text-dark);
+    font-weight: 500;
+    padding: 0;
+    background: none;
+    box-shadow: none;
+    margin: 0;
+    word-break: break-word;
+}
+
+.view-infos-techniques em {
+    font-style: italic;
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    font-weight: 400;
+    display: block;
+}
+
+@media (max-width: 900px) {
+    .view-infos-techniques {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .infos-API {
+        padding: 30px;
+    }
+}
+
+@media (max-width: 700px) {
+    .infos-API {
+        padding: 20px;
+    }
+
+    .infos-API h2 {
+        font-size: 1.5rem;
+        padding: 20px;
+    }
+
+    #view-infos-techniques-content {
+        padding: 20px;
+    }
+
+    .view-infos-techniques {
+        gap: 20px;
+    }
+
+    .view-infos-techniques h3 {
+        font-size: 0.85rem;
+    }
+
+    .view-infos-techniques li {
+        font-size: 0.9rem;
+    }
+
+    .view-infos-techniques em {
+        font-size: 0.75rem;
+        margin-top: 4px;
+    }
+}
+
+@media (max-width: 480px) {
+    .infos-API {
+        padding: 15px;
+        margin: 0;
+    }
+
+    .infos-API h2 {
+        font-size: 1.2rem;
+        padding: 15px;
+    }
+
+    #view-infos-techniques-content {
+        padding: 15px;
+    }
+
+    .view-infos-techniques {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .view-infos-techniques h3 {
+        font-size: 0.75rem;
+        margin-bottom: 8px;
+    }
+
+    .view-infos-techniques li {
+        font-size: 0.85rem;
+    }
+
+    .view-infos-techniques em {
+        font-size: 0.7rem;
+    }
+}
+
+@media (max-width: 380px) {
+    .infos-API {
+        padding: 12px;
+    }
+
+    .infos-API h2 {
+        font-size: 1.1rem;
+        padding: 12px;
+    }
+
+    #view-infos-techniques-content {
+        padding: 12px;
+    }
+
+    .view-infos-techniques {
+        gap: 15px;
+    }
+
+    .view-infos-techniques h3 {
+        font-size: 0.7rem;
+    }
+
+    .view-infos-techniques li {
+        font-size: 0.8rem;
+    }
+
+    .view-infos-techniques em {
+        font-size: 0.65rem;
+    }
+}
