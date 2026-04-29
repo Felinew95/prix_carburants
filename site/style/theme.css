@@ -1,0 +1,275 @@
+
+body,
+body * {
+    transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+html.mode-nuit {
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+}
+
+.nav_bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.btn-theme {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    border: none;
+    background: #4f46e5;
+    color: #ffffff;
+    font-size: 1.1rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    transition: 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 2px 8px rgba(79, 70, 229, 0.4);
+}
+
+.btn-theme:hover {
+    background: #4338ca;
+    transform: scale(1.1);
+}
+
+body.mode-nuit {
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%) !important;
+    color: #f1f5f9 !important;
+}
+
+body.mode-nuit header {
+    background: #1e293b !important;
+}
+
+body.mode-nuit .nav_menu li a {
+    color: #f1f5f9 !important;
+}
+
+body.mode-nuit section,
+body.mode-nuit .bloc-statistiques,
+body.mode-nuit .selection-section,
+body.mode-nuit .contact-card,
+body.mode-nuit .card-body,
+body.mode-nuit .card-socials{
+    background: #1f2b41 !important;
+    color: #f1f5f9 !important;
+    border-color: #334155 !important;
+}
+
+body.mode-nuit .info-card-box {
+    background: #1f2b41 !important;
+    border-color: #334155 !important;
+}
+
+body.mode-nuit .gps-tag {
+    background: black !important;
+}
+
+body.mode-nuit #contacts-carburants, 
+body.mode-nuit #a-propos {
+    background:  #0f172a !important;
+    color: #f1f5f9 !important;
+    border-radius: 12px;
+}
+
+body.mode-nuit .card-header-contact {
+    filter: brightness(0.9);
+}
+
+body.mode-nuit .titre-section,
+body.mode-nuit .station-name,
+body.mode-nuit .step-header h2 {
+    color: #f1f5f9 !important;
+}
+
+body.mode-nuit p,
+body.mode-nuit label,
+body.mode-nuit .text-wrap dd,
+body.mode-nuit .card-body p,
+body.mode-nuit .station-location,
+body.mode-nuit .form-hint {
+    color: #cbd5e1 !important;
+}
+
+body.mode-nuit .text-wrap dt,
+body.mode-nuit .fuel-type,
+body.mode-nuit .update-time,
+body.mode-nuit .note-graphique,
+body.mode-nuit .compteur-stations,
+body.mode-nuit .message-aucune-donnee,
+body.mode-nuit .titre-section em {
+    color: #94a3b8 !important;
+}
+
+body.mode-nuit .price-box,
+body.mode-nuit .carte-prix {
+    background: #0f172a !important;
+    border-color: #334155 !important;
+}
+
+body.mode-nuit .price-value {
+    color: #f1f5f9 !important;
+}
+
+body.mode-nuit .station-card {
+    background: #1e293b !important;
+    border-color: #334155 !important;
+}
+
+body.mode-nuit .card-header {
+    background: #0f172a !important;
+    border-color: #334155 !important;
+    color: #f1f5f9 !important;
+}
+
+body.mode-nuit .departement-form,
+body.mode-nuit .ville-form {
+    background: #1e293b !important;
+    border-color: #334155 !important;
+}
+
+body.mode-nuit .departement-select,
+body.mode-nuit input,
+body.mode-nuit textarea,
+body.mode-nuit select {
+    background: #0f172a !important;
+    color: #f1f5f9 !important;
+    border-color: #334155 !important;
+}
+
+body.mode-nuit .form-line label {
+    color: #f1f5f9 !important;
+}
+
+body.mode-nuit .nom-ville {
+    color: #f1f5f9 !important;
+}
+
+body.mode-nuit .barre-progression-fond {
+    background: #334155 !important;
+}
+
+
+body.mode-nuit .conteneur-graphique {
+    background: #0f172a !important;
+}
+
+body.mode-nuit .tableau-comparaison thead tr {
+    background: #0f172a !important;
+}
+
+body.mode-nuit .tableau-comparaison th {
+    color: #f1f5f9 !important;
+}
+
+body.mode-nuit .tableau-comparaison td {
+    color: #f1f5f9 !important;
+    border-color: #334155 !important;
+}
+
+body.mode-nuit .tableau-comparaison tbody tr:hover {
+    background: #334155 !important;
+}
+
+body.mode-nuit .card-socials h3 {
+    color: white !important;
+}
+
+body.mode-nuit .plan-header,
+body.mode-nuit .plan-content {
+    color: white !important;
+}
+
+body.mode-nuit .plan-content a {
+    color: white;
+}
+
+body.mode-nuit .plan-content a:hover {
+    color: #60a5fa !important;
+}
+
+body.mode-nuit .plan-header {
+    background: #293444 !important;
+}
+
+body.mode-nuit .plan-content {
+    background: #414958 !important;
+}
+
+body.mode-nuit #plan {
+    background-color: transparent !important;
+}
+
+body.mode-nuit .Film_Ghibli,
+body.mode-nuit .geolocatisation ,
+body.mode-nuit .infos-API  {
+    background-color: transparent !important;
+}
+
+body.mode-nuit #TopRow {
+    border-radius: 12px;
+}
+
+body.mode-nuit .Film_Ghibli h2,
+body.mode-nuit .geolocatisation h2,
+body.mode-nuit .infos-API h1,
+body.mode-nuit .infos-API h2 {
+    background: linear-gradient(135deg, #e5e7eb, #9ca3af);
+    color: black;
+}
+
+body.mode-nuit #TopRow,
+body.mode-nuit #Description,
+body.mode-nuit #geolocalisationInfos,
+body.mode-nuit #view-infos-techniques-content,
+body.mode-nuit .step-infos {
+    background: #3b5174 !important;
+    color: white !important;
+}
+
+body.mode-nuit #InfosFilm dl,
+body.mode-nuit #InfosFilm dt,
+body.mode-nuit #InfosFilm dd, 
+body.mode-nuit #geolocalisationInfos dl,
+body.mode-nuit #geolocalisationInfos dt,
+body.mode-nuit #geolocalisationInfos dd, 
+body.mode-nuit #view-api ul,
+body.mode-nuit #view-api li,
+body.mode-nuit #view-tech ul,
+body.mode-nuit #view-tech li,
+body.mode-nuit #view-tech em,
+body.mode-nuit #view-api em {
+    color: white !important;
+}
+
+
+body.mode-nuit #infos-API-Geo dt,
+body.mode-nuit #infos-API-Geo dd {
+    color: black !important;
+}
+
+body.mode-nuit #view-tech h3 {
+    color: rgb(245, 183, 245) !important;
+} 
+
+body.mode-nuit #view-api h3 {
+    color: rgb(199, 195, 250) !important;
+}
+
+body.mode-nuit #Description h3 {
+    color: white !important;
+}
+
+body.mode-nuit #TopRow {
+    background: #0f172a !important;
+}
+
+body.mode-nuit .liste-villes {
+    background: #3b5174 !important;
+    color: white !important;
+}
