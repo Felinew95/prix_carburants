@@ -1,0 +1,55 @@
+
+.plan-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+}
+
+.plan-header {
+    background: linear-gradient(130deg, rgb(216, 216, 216), rgb(165, 165, 165));
+    color: black;
+    text-align: center;
+    font-size: 1.5rem;
+    padding: 25px;
+    border-radius: 12px 12px 0 0;
+    box-shadow: var(--shadow-md);
+    letter-spacing: 0.5px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 600;
+    margin: 0;
+    word-break: break-word;
+}
+
+.plan-content {
+    background: var(--bg-white);
+    padding: 30px;
+    border-radius: 0 0 12px 12px;
+    box-shadow: var(--shadow-sm);
+}
+
+.plan-content ul {
+    list-style: circle;
+    padding-left: 20px;
+}
+
+.plan-content li {
+    margin-bottom: 12px;
+}
+
+.plan-content li a {
+    color: blue;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    display: inline-block;
+}
+
+.plan-content li a:hover {
+    transform: translateX(5px);
+    color: var(--text-dark);
+}
+
+body.mode-nuit #plan h2 {
+    color: white;
+}
