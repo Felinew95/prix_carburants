@@ -11,7 +11,7 @@ Site web permettant de consulter les prix des carburants en France par région, 
 ## Liens des sites
 
 - [tauseefahmed.alwaysdata.net](https://tauseefahmed.alwaysdata.net/) — **Tauseef AHMED**
-- [burin.alwaysdata.net/stats.php](https://burin.alwaysdata.net/stats.php) — **Alexandre BURIN**
+- [https://burin.alwaysdata.net/](https://burin.alwaysdata.net/) — **Alexandre BURIN**
 
 
 ## Structure du projet
