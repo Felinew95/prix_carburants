@@ -2,15 +2,17 @@
 
 Site web permettant de consulter les prix des carburants en France par région, département et ville.
 
+## Auteurs
+
+- **Alexandre BURIN** - Co-fondateur & Développeur
+- **Tauseef AHMED** - Co-fondateur & Développeur
+
+
 ## Liens des sites
 
 - [tauseefahmed.alwaysdata.net](https://tauseefahmed.alwaysdata.net/) — **Tauseef AHMED**
 - [burin.alwaysdata.net/stats.php](https://burin.alwaysdata.net/stats.php) — **Alexandre BURIN**
 
-## Auteurs
-
-- **Alexandre BURIN** - Co-fondateur & Développeur
-- **Tauseef AHMED** - Co-fondateur & Développeur
 
 ## Structure du projet
 
