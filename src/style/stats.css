@@ -1,0 +1,345 @@
+:root {
+    --couleur-fond-blanc: #ffffff;
+    --couleur-texte-sombre: #2c3e50;
+    --couleur-texte-attenue: #64748b;
+    --couleur-blanc: #ffffff;
+    --couleur-bleu-secondaire: #3b82f6;
+    --couleur-secondaire: #2c3e50;
+    --ombre-petite: 0 2px 8px rgba(0, 0, 0, 0.08);
+    --ombre-moyenne: 0 4px 12px rgba(0, 0, 0, 0.15);
+    --ombre-grande: 0 10px 25px rgba(0, 0, 0, 0.2);
+    --rayon-bordure: 12px;
+
+    --gazole: #714b08;
+    --sp95: #053b91;
+    --sp98: #910505;
+    --e10: #028019;
+}
+
+body.mode-nuit {
+    --gazole: #cfa24a;
+    --sp95: #3b82f6;
+    --sp98: #ef4444;
+    --e10: #22c55e;
+}
+
+.liste-villes {
+    margin: 20px;
+    padding: 25px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f8fafc;
+    border-radius: 10px;
+    border: 1px solid #e2e8f0;
+}
+
+.liste-villes ol {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin: 0;
+    padding-left: 25px;
+}
+
+.bandeau-titre {
+    background: linear-gradient(90deg, #1e40af, #4f46e5);
+    margin: 30px auto 0;
+    width: 95%;
+    max-width: 1100px;
+    border-radius: var(--rayon-bordure);
+    padding: 30px 40px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    color: var(--couleur-blanc);
+    box-shadow: var(--ombre-grande);
+}
+
+.bandeau-icone {
+    width: 55px;
+    height: 55px;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 26px;
+    flex-shrink: 0;
+}
+
+.bandeau-texte h2 {
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin-bottom: 6px;
+}
+
+.bandeau-texte p {
+    font-size: 0.95rem;
+    opacity: 0.85;
+    font-weight: 400;
+}
+
+.bloc-statistiques {
+    width: 95%;
+    max-width: 1100px;
+    margin: 25px auto;
+    background: var(--couleur-fond-blanc);
+    border-radius: var(--rayon-bordure);
+    padding: 30px 35px;
+    box-shadow: var(--ombre-moyenne);
+}
+
+.bloc-statistiques.fond-sombre {
+    background: #1e293b;
+    color: var(--couleur-blanc);
+}
+
+.grille-cartes-deux-colonnes {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.grille-cartes-quatre-colonnes {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.carte-statistique {
+    border-radius: var(--rayon-bordure);
+    padding: 28px 24px;
+    color: var(--couleur-blanc);
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    box-shadow: var(--ombre-moyenne);
+}
+
+.carte-icone {
+    font-size: 22px;
+    opacity: 0.85;
+    margin-bottom: 4px;
+}
+
+.carte-nombre {
+    font-size: 2.2rem;
+    font-weight: 800;
+}
+
+.carte-libelle {
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.carte-sous-titre {
+    font-size: 0.8rem;
+    opacity: 0.75;
+}
+
+.degrade-bleu   { background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%); }
+.degrade-rose   { background: linear-gradient(135deg, #ec4899 0%, #a21caf 100%); }
+.degrade-violet { background: linear-gradient(135deg, #a855f7 0%, #ec4899 100%); }
+.degrade-vert   { background: linear-gradient(135deg, #10b981 0%, #059669 100%); }
+.degrade-orange { background: linear-gradient(135deg, #f97316 0%, #dc2626 100%); }
+
+.conteneur-graphique {
+    position: relative;
+    background: #f8fafc;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 10px;
+}
+
+.note-graphique {
+    font-size: 0.88rem;
+    color: var(--couleur-texte-attenue);
+    margin-bottom: 14px;
+    font-style: italic;
+}
+
+.grille-prix-carburants {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+}
+
+.carte-prix {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    padding: 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.carte-prix-libelle {
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.carte-prix-valeur {
+    font-size: 1.8rem;
+    font-weight: 800;
+}
+
+.etiquette-comparaison {
+    font-size: 0.82rem;
+    font-weight: 600;
+    padding: 3px 8px;
+    border-radius: 20px;
+    display: inline-block;
+    width: fit-content;
+}
+
+.etiquette-comparaison.moins-cher { background: #dcfce7; color: #16a34a; }
+.etiquette-comparaison.plus-cher  { background: #fee2e2; color: #dc2626; }
+
+.liste-villes-populaires {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.ligne-ville {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.rang-ville {
+    width: 28px;
+    height: 28px;
+    background: linear-gradient(135deg, #3b82f6, #4f46e5);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8rem;
+    font-weight: 700;
+    flex-shrink: 0;
+}
+
+.nom-ville {
+    min-width: 140px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: var(--couleur-texte-sombre);
+}
+
+.barre-progression-fond {
+    flex: 1;
+    background: #e2e8f0;
+    border-radius: 20px;
+    height: 10px;
+    overflow: hidden;
+}
+
+.barre-progression-remplie {
+    height: 100%;
+    background: linear-gradient(90deg, #3b82f6, #4f46e5);
+    border-radius: 20px;
+    transition: width 0.6s ease;
+}
+
+.compteur-stations {
+    min-width: 90px;
+    text-align: right;
+    font-size: 0.85rem;
+    color: var(--couleur-texte-attenue);
+    font-weight: 500;
+}
+
+.message-aucune-donnee {
+    color: var(--couleur-texte-attenue);
+    font-style: italic;
+    font-size: 0.9rem;
+}
+
+.conteneur-tableau-comparaison {
+    overflow-x: auto;
+}
+
+.tableau-comparaison {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.95rem;
+}
+
+.tableau-comparaison thead tr {
+    background: #f1f5f9;
+}
+
+.tableau-comparaison th {
+    padding: 12px 16px;
+    text-align: left;
+    font-weight: 700;
+    color: var(--couleur-texte-sombre);
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.tableau-comparaison tbody tr {
+    border-bottom: 1px solid #e2e8f0;
+    transition: 0.2s;
+}
+
+.tableau-comparaison tbody tr:hover {
+    background: #f8fafc;
+}
+
+.tableau-comparaison td {
+    padding: 14px 16px;
+    vertical-align: middle;
+}
+
+.puce-couleur {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-right: 8px;
+    vertical-align: middle;
+}
+
+.cellule-prix {
+    font-weight: 700;
+    font-size: 1rem;
+}
+
+.cellule-difference {
+    font-weight: 700;
+    font-size: 0.95rem;
+}
+
+.cellule-difference.moins-cher { color: #16a34a; }
+.cellule-difference.plus-cher  { color: #dc2626; }
+
+@media (max-width: 900px) {
+    .grille-cartes-quatre-colonnes { grid-template-columns: repeat(2, 1fr); }
+    .grille-prix-carburants         { grid-template-columns: repeat(2, 1fr); }
+    .grille-apropos                 { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 700px) {
+    .bandeau-titre                  { flex-direction: column; text-align: center; padding: 25px 20px; }
+    .bloc-statistiques              { padding: 20px; }
+    .grille-cartes-deux-colonnes    { grid-template-columns: 1fr; }
+    .grille-cartes-quatre-colonnes  { grid-template-columns: repeat(2, 1fr); }
+    .grille-prix-carburants         { grid-template-columns: repeat(2, 1fr); }
+    .nom-ville                      { min-width: 100px; }
+    header                          { flex-direction: column; gap: 10px; padding: 15px 20px; }
+    .nav_menu                       { gap: 1.5em; }
+}
+
+@media (max-width: 480px) {
+    .grille-cartes-quatre-colonnes  { grid-template-columns: 1fr; }
+    .grille-prix-carburants         { grid-template-columns: 1fr; }
+    .bandeau-texte h2               { font-size: 1.2rem; }
+    .tableau-comparaison th,
+    .tableau-comparaison td         { padding: 10px; font-size: 0.85rem; }
+}
